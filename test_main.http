@@ -1,0 +1,67 @@
+### Создать нового студента
+POST http://127.0.0.1:8000/students
+Content-Type: application/json
+
+{
+  "first_name": "Алиса",
+  "last_name": "Белова",
+  "class_id": 1
+}
+
+### Получить информацию о студенте по его id
+GET http://127.0.0.1:8000/students/1
+Accept: application/json
+
+### Обновить информацию о студенте по его id
+PUT http://127.0.0.1:8000/students/1
+Content-Type: application/json
+
+{
+  "first_name": "Ирина",
+  "last_name": "Миронова",
+  "class_id": 1
+}
+
+### Удалить студента по его id
+DELETE http://127.0.0.1:8000/students/1
+
+### Получить список всех преподавателей
+GET http://127.0.0.1:8000/teachers
+Accept: application/json
+
+### Создать новый курс
+POST http://127.0.0.1:8000/courses
+Content-Type: application/json
+
+{
+  "course_name": "Математика",
+  "department_id": 1
+}
+
+### Получить информацию о курсе по его id
+GET http://127.0.0.1:8000/courses/1
+Accept: application/json
+
+### Получить список всех студентов на курсе
+GET http://127.0.0.1:8000/courses/1/students
+Accept: application/json
+
+### Создать новую оценку для студента по курсу
+POST http://127.0.0.1:8000/grades
+Content-Type: application/json
+
+{
+  "grade_value": 5,
+  "student_id": 2,
+  "class_id": 1
+}
+
+### Обновить оценку студента по курсу
+PUT http://127.0.0.1:8000/grades/5
+Content-Type: application/json
+
+{
+  "grade_value": 4,
+  "student_id": 2,
+  "class_id": 1
+}

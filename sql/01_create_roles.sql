@@ -1,0 +1,2 @@
+CREATE ROLE postgres WITH LOGIN PASSWORD 'pass' CREATEDB;
+--ALTER ROLE postgres WITH PASSWORD 'pass';
